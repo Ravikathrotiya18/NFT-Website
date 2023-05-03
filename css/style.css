@@ -1,0 +1,16 @@
+img{
+    width: 100%;
+}
+.logo{
+    width: 40px;
+    border-radius: 50%;
+}
+.slider-img{
+    height: 200px;
+}
+.slider{
+    color: white;
+}
+#c1{
+    display: none;
+}

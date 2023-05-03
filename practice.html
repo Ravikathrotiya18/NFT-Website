@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #profile1 {
+            display: block;
+        }
+
+        #profile2 {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <a href="#profile1">Profile 1</a>
+    <a href="#profile2">Profile 2</a>
+    <div id="profile1">
+        <!-- Profile 1 content here -->
+    </div>
+
+    <div id="profile2">
+        <!-- Profile 2 content here -->
+    </div>
+
+</body>
+<script>
+    var links = document.getElementsByTagName('a');
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function (event) {
+            event.preventDefault();
+            var target = this.getAttribute('href');
+            var divs = document.getElementsByTagName('div');
+            for (var j = 0; j < divs.length; j++) {
+                if (divs[j].getAttribute('id') === target.replace('#', '')) {
+                    divs[j].style.display = 'block';
+                } else {
+                    divs[j].style.display = 'none';
+                }
+            }
+        });
+    }
+</script>
+
+</html>
